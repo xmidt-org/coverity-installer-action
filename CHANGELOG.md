@@ -9,8 +9,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [2.0.0]
 ## Fixes
-- Make the script executable.
+- Update the name to be repo instead of slug.
+- Make any failure fatal.
 
 ## [1.0.0]
 ### Added
