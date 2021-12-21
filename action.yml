@@ -1,0 +1,28 @@
+# SPDX-FileCopyrightText: 2021 Comcast Cable Communications Management, LLC
+# SPDX-License-Identifier: Apache-2.0
+
+name: 'Coverity Installer'
+description: 'Provide a safe and uniform way of installing the Coverity tooling.'
+branding:
+  icon: archive
+  color: 'green'
+input:
+  working-directory:
+    description: 'The working directory used for building.'
+    required: false
+    default: '.'
+  token:
+    description: 'The coverity token that provides access to the download.'
+    required: true
+  slug:
+    description: 'The GITHUB_REPOSITORY value must be passed.'
+    required: true
+runs:
+  using: "composite"
+  steps:
+    - shell: bash
+      run: |
+        ${{ github.action_path }}/get_coverity.sh \
+          ${{ inputs.working-directory }}  \
+          ${{ inputs.token }} \
+          ${{ inputs.slug }}
