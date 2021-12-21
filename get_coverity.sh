@@ -3,6 +3,7 @@
 # SPDX-License-Identifier: Apache-2.0
 
 # Usage: get_coverity.sh working_directory token GITHUB_REPOSITORY
+set -e
 
 working=$1
 token=$2
