@@ -14,7 +14,7 @@ input:
   token:
     description: 'The coverity token that provides access to the download.'
     required: true
-  slug:
+  repo:
     description: 'The GITHUB_REPOSITORY value must be passed.'
     required: true
 runs:
@@ -25,4 +25,4 @@ runs:
         ${{ github.action_path }}/get_coverity.sh \
           ${{ inputs.working-directory }}  \
           ${{ inputs.token }} \
-          ${{ inputs.slug }}
+          ${{ inputs.repo }}
