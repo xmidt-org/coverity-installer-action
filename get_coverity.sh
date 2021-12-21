@@ -3,6 +3,8 @@
 # SPDX-License-Identifier: Apache-2.0
 
 # Usage: get_coverity.sh working_directory token GITHUB_REPOSITORY
+
+# Make all errors fatal
 set -e
 
 working=$1
